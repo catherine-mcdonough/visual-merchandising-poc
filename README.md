@@ -1,1 +1,1 @@
-# visual-merchandising-poc
+# Visual Merchandising POC
