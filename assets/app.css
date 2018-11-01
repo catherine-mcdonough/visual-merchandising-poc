@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #444;
+	font-family: 'Lato';
+	font-weight: 300;
+	line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.drag-container {
+	max-width: 1000px;
+  margin: 20px auto;
+}
+
+.drag-list {
+  min-height: 316.53px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.drag-column {
+	flex: 1;
+	margin: 30px 0;
+	position: relative;
+	background: whitesmoke;
+  overflow: hidden;
+  border-radius: 4px;
+}
+	
+.drag-column h2 {
+  font-size: 0.8rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.drag-column-on-hold .drag-column-header,
+.drag-column-on-hold .is-moved,
+.drag-column-on-hold .drag-options {
+  background: #FB7D44;
+}
+
+.drag-column-in-progress .drag-column-header,
+.drag-column-in-progress .is-moved,
+.drag-column-in-progress .drag-options {
+  background: #2A92BF;
+}
+
+.drag-column-needs-review .drag-column-header,
+.drag-column-needs-review .is-moved,
+.drag-column-needs-review .drag-options{
+  background: #F4CE46;
+}
+
+.drag-column-approved .drag-column-header,
+.drag-column-approved .is-moved,
+.drag-column-approved .drag-options {
+  background: #00B961;
+}
+	
+
+.drag-column-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.drag-inner-list {
+	min-height: 50px;
+}
+
+.drag-list__item {
+  min-height: 100px;
+  padding: 15px;
+  transition: all .3s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  width: 25%;
+  cursor: grab;
+}
+
+.drag-list__card {
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+}
+
+.drag-list__card-image {
+  height: 150px;
+  width: 175px;
+}
+
+.drag-list__card-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.drag-list__item.is-moving {
+  transform: scale(1.5);
+  cursor: grabbing;
+}
+
+.drag-header-more {
+	cursor: pointer;
+}
+
+/* Dragula CSS  */
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+	list-style-type: none;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.search-box {
+  flex: 1 0 auto;
+  padding: 8px 20px;
+  height: 80px;
+  border: 0;
+  box-shadow: 0 3px 12px -1px whitesmoke;
+  transition: all .15s ease-in-out;
+}
+.search-box:focus {
+  flex: 1 0 90%;
+  margin: 0;
+  outline: 0;
+  box-shadow: 0 3px 12px -1px gainsboro;
+}
+
+.search-label {
+  position: absolute;
+  top: 14px;
+  right: 30px;
+  font-size: 40px;
+  transition: all .15s ease-in-out;
+}
+
+.search-box:focus + .search-label {
+  transform: translateX(12px);
+}
