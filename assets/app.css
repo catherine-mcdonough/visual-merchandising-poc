@@ -167,9 +167,9 @@ ul {
 
 .search-label {
   position: absolute;
-  top: 14px;
+  top: 15px;
   right: 30px;
-  font-size: 40px;
+  font-size: 34px;
   transition: all .15s ease-in-out;
 }
 
