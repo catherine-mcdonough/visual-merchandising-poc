@@ -19,7 +19,7 @@ dragula([
 
   const productId = el.getAttribute("data-product-id");
   
-  console.log("moved a card" + productId);
+  console.log("moved card with ID: " + productId);
 	
 	// add the 'is-moved' class for 600ms then remove it
 	window.setTimeout(function() {
